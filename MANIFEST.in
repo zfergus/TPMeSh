@@ -1,0 +1,7 @@
+include src/fourier_tpms.hpp
+include src/implicit_shell.hpp
+include src/implicit.hpp
+include src/interpolated_tpms.hpp
+include src/spatially_varying_tpms.hpp
+include src/tpms_gradient.hpp
+include src/tpms.hpp

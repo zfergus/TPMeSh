@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=42", "wheel", "ninja"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "TPMeSh"
+version = "0.0.1"
+authors = [{ name = "Zachary Ferguson", email = "zy.fergus@gmail.com" }]
+description = "Triply periodic meshing for triply periodic minimal surfaces"
+readme = "README.md"
+license = { file = "LICENSE" }
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Scientific/Engineering :: Visualization",
+]
+requires-python = ">=3.7"
+dependencies = [
+    "libigl",
+    "meshio",
+    "numpy",
+    # "git+https://github.com/zfergus/pygalmesh.git",
+    "PyMCubes",
+]
+keywords = ["mathematics", "engineering", "mesh", "mesh generation"]
+
+[project.urls]
+"Homepage" = "https://github.com/zfergus/TPMeSh"
+"Bug Tracker" = "https://github.com/zfergus/TPMeSh/issues"
+"Source Code" = "https://github.com/zfergus/TPMeSh"
+
+[tools.cibuildwheel]
+build-frontend = "build"
