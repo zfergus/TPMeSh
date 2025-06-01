@@ -2,6 +2,39 @@
 
 Triply Periodic Meshing for Triply Periodic Minimal Surfaces
 
+## Building
+
+#### Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+* [numpy](https://numpy.org/) – for numerical operations
+* [libigl](https://pypi.org/project/libigl/) – for mesh cleaning and processing
+* [meshio](https://github.com/nschloe/meshio) – for reading and writing meshes
+* [pygalmesh](https://github.com/zfergus/pygalmesh) – for mesh generation
+* [polyscope](https://polyscope.run/) – for visualization
+* [PyMCubes](https://github.com/pmneila/PyMCubes) – for surface mesh generation
+
+> NOTE: We use a custom fork of `pygalmesh` ([zfergus/pygalmesh](https://github.com/zfergus/pygalmesh)). Install it with:
+> ```
+> pip install git+https://github.com/zfergus/pygalmesh.git
+> ```
+> rather than `pip install pygalmesh`.
+
+#### Building C++ backend
+
+We use a C++ backend to accelerate implicit function evaluations. To build it, you need to have a C++ compiler and CMake installed. Then run:
+
+```bash
+pip install -e .
+```
+
+This uses `nanobind` to create a `_tpms` module that provides the C++ functionality for evaluating TPMS implicit functions.
+
+> NOTE: The `_tpms` module is included in the `TPMeSh` package, so you don't need to import it separately.
+
 ## Usage
 
 ```
@@ -68,3 +101,8 @@ python -m TPMeSh.mesh_tpms -i 2 -r 1 1 1 -p -o "2p.msh"
 ```
 
 ![Periodic Meshing](assets/periodic.png)
+
+## License
+
+This project is licensed under the GPL v3.0 License - see the [LICENSE](LICENSE) file for details.
+This is in compliance with the original `CGAL`/`pygalmesh` licenses, which are also GPL v3.0.

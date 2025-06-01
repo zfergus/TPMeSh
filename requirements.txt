@@ -4,8 +4,6 @@ numpy
 
 # Viewers
 polyscope
-pythreejs
-git+https://github.com/skoch9/meshplot.git
 
 # Meshing
 git+https://github.com/zfergus/pygalmesh.git # requires CGAL system installation
