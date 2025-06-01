@@ -57,7 +57,7 @@ python examples/spatially_varying_tpms.py
 We can create a square wave function using the gyroid TPMS. The square wave is defined as:
 
 $$
-f(x, y, z) = \sum_{k=1}^{N} \frac{\operatorname{gyroid}\left({(2k-1)}\cdot x, y, z\right)}{2k-1}
+f(x, y, z) = \sum_{k=1}^{N} \frac{\mathrm{gyroid}\left({(2k-1)}\cdot x, y, z\right)}{2k-1}
 $$
 
 where $N=4$ in this example.
