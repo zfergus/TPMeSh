@@ -102,7 +102,6 @@ Generate interesting combinations of TPMS primitives.
 python examples/interesting_combos.py
 ```
 
-| a | b | c |
+| `-x 0 0 0 0.4 0 0 0.4 0.2` | `-x 0 0 0.24 0.2 0 0 0 0.56` | `-x 0.4 0 0.6 0 0 0 0 0` |
 | :---: | :---: | :---: |
 | ![](../assets/examples/interesting_a.png) | ![](../assets/examples/interesting_b.png) | ![](../assets/examples/interesting_c.png) |
-| `-x 0 0 0 0.4 0 0 0.4 0.2` | `-x 0 0 0.24 0.2 0 0 0 0.56` | `-x 0.4 0 0.6 0 0 0 0 0` |
