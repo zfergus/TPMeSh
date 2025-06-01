@@ -3,10 +3,13 @@
 ## Cylinder
 
 Implicit representation of a cylinder with radius `r` aligned along the y-axis:
+
 $$
 f(x, y, z) = (x-r)^2 + (z-r)^2 - r^2.\\
 $$
+
 The partial derivatives are:
+
 $$
 \frac{\partial f}{\partial x} = 2(x-r)\quad\quad
 \frac{\partial f}{\partial y} = 0\quad\quad
