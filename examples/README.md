@@ -51,3 +51,19 @@ python examples/spatially_varying_tpms.py
 ```
 
 ![Spatially Varying TPMS](../assets/examples/spatially_varying_tpms.png)
+
+## Square Wave
+
+We can create a square wave function using the gyroid TPMS. The square wave is defined as:
+
+$$
+f(x, y, z) = \sum_{k=1}^{N} \frac{\operatorname{gyroid}\left({(2k-1)}\cdot x, y, z\right)}{2k-1}
+$$
+
+where $N=4$ in this example.
+
+```bash
+python examples/square_wave.py
+```
+
+![Square Wave](../assets/examples/square_wave.png)
