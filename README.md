@@ -102,6 +102,18 @@ python -m TPMeSh.mesh_tpms -i 2 -r 1 1 1 -p -o "2p.msh"
 
 ![Periodic Meshing](assets/periodic.png)
 
+### Interpolation
+
+To interpolate a TPMS surface mesh, you can use the `-x` option with the design parameters. For example:
+
+```bash
+python -m TPMeSh.mesh_tpms -x 0.4 0 0.6 0 0 0 0 0 -o "interpolation_a.msh"
+python -m TPMeSh.mesh_tpms -x 0 0 0.24 0.2 0 0 0 0.56 -o "interpolation_b.msh"
+python -m TPMeSh.mesh_tpms -x 0 0 0 0.4 0 0 0.4 0.2 -o "interpolation_c.msh"
+```
+
+![alt text](assets/interpolation.png)
+
 ## License
 
 This project is licensed under the GPL v3.0 License - see the [LICENSE](LICENSE) file for details.
