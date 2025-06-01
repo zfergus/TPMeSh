@@ -26,6 +26,26 @@ python examples/cylinder.py
 
 Spatially interpolate between all eight TPMS primitives to create a spatially varying TPMS.
 
+Using the Sigmoid function
+
+$$
+S(x) = \frac{1}{1 + e^{-x}}
+$$
+
+we define the spatially varying TPMS as:
+
+$$
+f(x, y, z) = \sum_{i=1}^8 S(m_i^{x} x) \cdot S(m^y_i y) \cdot S(m^z_i z) \cdot f_i(x, y, z),
+$$
+
+where $f_i$ are the eight TPMS primitives, and
+
+$$
+m_{\{1,2,3,4\}}^{x} = -1, \quad m_{\{5,6,7,8\}}^{x} = 1,\\
+m_{\{1,2,5,6\}}^{y} = -1, \quad m_{\{2,3,7,8\}}^{y} = 1,\\
+m_{\{1,3,5,7\}}^{z} = -1, \quad m_{\{2,4,6,8\}}^{z} = 1.
+$$
+
 ```bash
 python examples/spatially_varying_tpms.py
 ```
