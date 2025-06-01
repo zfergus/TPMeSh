@@ -117,4 +117,4 @@ python -m TPMeSh.mesh_tpms -x 0 0 0 0.4 0 0 0.4 0.2 -o "interpolation_c.msh"
 ## License
 
 This project is licensed under the GPL v3.0 License - see the [LICENSE](LICENSE) file for details.
-This is in compliance with the original `CGAL`/`pygalmesh` licenses, which are also GPL v3.0.
+This is in compliance with the original CGAL/pygalmesh licenses, which are also GPL v3.0.
