@@ -67,3 +67,41 @@ python examples/square_wave.py
 ```
 
 ![Square Wave](../assets/examples/square_wave.png)
+
+## Large Examples
+
+Generate large tilings of TPMS.
+
+```bash
+python examples/large_examples.py
+```
+
+| a | b | c |
+| :---: | :---: | :---: |
+| ![](../assets/examples/large_a.png) | ![](../assets/examples/large_b.png) | ![](../assets/examples/large_c.png) |
+
+## Primitves
+
+Generate high resolution surface meshes for the eight TPMS primitives.
+```bash
+./examples/primitives.sh
+```
+
+<!-- 4x2 Tables of Images for TPMS primitives -->
+| (1) Schoen Gyroid | (2) Schwarz Diamond | (3) Schwarz Primitive | (4) Schoen IWP |
+| :---: | :---: | :---: | :---: |
+| ![Primitive 0](../assets/primitives/0.png) | ![Primitive 1](../assets/primitives/1.png) | ![Primitive 2](../assets/primitives/2.png) | ![Primitive 3](../assets/primitives/3.png) |
+| **(5) Neovius** | **(6) Fischer Koch S** | **(7) Schoen FRD** | **(8) PMY** |
+| ![Primitive 4](../assets/primitives/4.png) | ![Primitive 5](../assets/primitives/5.png) | ![Primitive 6](../assets/primitives/6.png) | ![Primitive 7](../assets/primitives/7.png) |
+
+## Interesting Combinations
+
+Generate interesting combinations of TPMS primitives.
+
+```bash
+python examples/interesting_combos.py
+```
+
+| a | b | c |
+| :---: | :---: | :---: |
+| ![](../assets/examples/interesting_a.png) | ![](../assets/examples/interesting_b.png) | ![](../assets/examples/interesting_c.png) |
