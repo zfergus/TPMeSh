@@ -2,10 +2,10 @@ import numpy as np
 import igl
 
 from _tpms import ImplicitShell, InterpolatedTPMS
-from mesh_implicit_periodic import mesh_implicit_periodic
-from mesh_implicit import mesh_implicit
-from utils import is_single_surface, tet_volume
-from visualize import visualize_mesh, visualize_periodic_mesh
+from .mesh_implicit_periodic import mesh_implicit_periodic
+from .mesh_implicit import mesh_implicit
+from .utils import is_single_surface, tet_volume
+from .visualize import visualize_mesh, visualize_periodic_mesh
 
 
 def mesh_tpms_periodic(x, thickness, **kwargs):
@@ -72,7 +72,8 @@ def parse_args():
         help="output mesh name (.stl for surface mesh, .msh for volume mesh)")
 
     parser.add_argument(
-        "-t", "--thickness", dest="thickness", type=float, default=0.5)
+        "-t", "--thickness", dest="thickness", type=float, default=0.5,
+        help="thickness of the TPMS mesh walls (default: 0.5)")
     parser.add_argument(
         "-n", "--elements-in-thickness", type=int, default=2,
         help="Number of elements in the thickness of the mesh (default: 2)")

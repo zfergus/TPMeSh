@@ -2,8 +2,8 @@ import numpy as np
 import igl
 import pygalmesh
 
-from mesh_implicit_surface import res3D
-from utils import remove_small_components, tet_volume, scale_to_unit_cube, scale_to_domain, lerp
+from .mesh_implicit_surface import res3D
+from .utils import remove_small_components, tet_volume, scale_to_unit_cube, scale_to_domain, lerp
 
 
 CUBE_VERTICES = np.array([
@@ -36,7 +36,7 @@ class Intersection(pygalmesh.DomainBase):
 
 class PyGALImplicit(pygalmesh.DomainBase):
     def __init__(self, f, repeats, feature_edge_res):
-        from mesh_implicit_surface import mesh_implicit_surface
+        from .mesh_implicit_surface import mesh_implicit_surface
 
         pygalmesh.DomainBase.__init__(self)
         self.f = f
@@ -260,7 +260,7 @@ def _mesh_implicit_surface(
     bbox = np.array([
         [0, 0, 0], scale_to_unit_cube(repeats * f.domain, repeats * f.domain)
     ])
-    bbox -= bbox.ptp(axis=0) / 2  # Center the bbox
+    bbox -= np.ptp(bbox, axis=0) / 2  # Center the bbox
     if verbose:
         print("PyGAL bounding box:", bbox.tolist())
 
