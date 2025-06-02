@@ -40,3 +40,6 @@ keywords = ["mathematics", "engineering", "mesh", "mesh generation"]
 
 [tools.cibuildwheel]
 build-frontend = "build"
+
+[project.scripts]
+TPMeSh = "TPMeSh.mesh_tpms:main"

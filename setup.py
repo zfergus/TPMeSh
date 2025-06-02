@@ -130,6 +130,7 @@ class CMakeBuild(build_ext):
 
 
 setup(
+    packages=["TPMeSh"],
     ext_modules=[CMakeExtension('_tpms')],
     cmdclass={"build_ext": CMakeBuild},
     zip_safe=False

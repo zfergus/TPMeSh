@@ -23,7 +23,7 @@ pip install -r requirements.txt
 > ```
 > rather than `pip install pygalmesh`.
 
-#### Building C++ backend
+#### Installing Python Package
 
 We use a C++ backend to accelerate implicit function evaluations. To build it, you need to have a C++ compiler and CMake installed. Then run:
 
@@ -35,10 +35,12 @@ This uses `nanobind` to create a `_tpms` module that provides the C++ functional
 
 > NOTE: The `_tpms` module is included in the `TPMeSh` package, so you don't need to import it separately.
 
+This will also install the Python package `TPMeSh` and provides a command-line interface for generating TPMS meshes of the same name.
+
 ## Usage
 
 ```
-$ python -m TPMeSh.mesh_tpms -h
+$ TPMeSh -h
 usage: mesh_tpms.py [-h] [-x X X X X X X X X] [-i I] [-s] [-p] [-o OUTPUT] [-t THICKNESS]
                     [-n ELEMENTS_IN_THICKNESS] [-r REPEATS REPEATS REPEATS] [-v]
 
@@ -66,7 +68,7 @@ options:
 To generate a mesh for a specific TPMS primitive, use the `-i` option with an integer index.
 
 ```bash
-python -m TPMeSh.mesh_tpms -i <primitive_index>
+TPMeSh -i <primitive_index>
 ```
 
 where `<primitive_index>` is an integer from 0 to 7, corresponding to the following TPMS primitives:
@@ -81,7 +83,7 @@ where `<primitive_index>` is an integer from 0 to 7, corresponding to the follow
 ### Volumetric Meshing
 
 ```bash
-python -m TPMeSh.mesh_tpms -i 2 -r 2 2 2 -o "2.msh"
+TPMeSh -i 2 -r 2 2 2 -o "2.msh"
 ```
 
 ![Periodic Meshing](assets/volumetric.gif)
@@ -89,7 +91,7 @@ python -m TPMeSh.mesh_tpms -i 2 -r 2 2 2 -o "2.msh"
 ### Surface Meshing
 
 ```bash
-python -m TPMeSh.mesh_tpms -i 2 -r 2 2 2 -s -o "2.stl"
+TPMeSh -i 2 -r 2 2 2 -s -o "2.stl"
 ```
 
 ![Periodic Meshing](assets/surface.gif)
@@ -97,7 +99,7 @@ python -m TPMeSh.mesh_tpms -i 2 -r 2 2 2 -s -o "2.stl"
 ### Periodic Meshing
 
 ```bash
-python -m TPMeSh.mesh_tpms -i 2 -r 1 1 1 -p -o "2p.msh"
+TPMeSh -i 2 -r 1 1 1 -p -o "2p.msh"
 ```
 
 ![Periodic Meshing](assets/periodic.png)
@@ -107,9 +109,9 @@ python -m TPMeSh.mesh_tpms -i 2 -r 1 1 1 -p -o "2p.msh"
 To interpolate a TPMS surface mesh, you can use the `-x` option with the design parameters. For example:
 
 ```bash
-python -m TPMeSh.mesh_tpms -x 0.4 0 0.6 0 0 0 0 0 -o "interpolation_a.msh"
-python -m TPMeSh.mesh_tpms -x 0 0 0.24 0.2 0 0 0 0.56 -o "interpolation_b.msh"
-python -m TPMeSh.mesh_tpms -x 0 0 0 0.4 0 0 0.4 0.2 -o "interpolation_c.msh"
+TPMeSh -x 0.4 0 0.6 0 0 0 0 0 -o "interpolation_a.msh"
+TPMeSh -x 0 0 0.24 0.2 0 0 0 0.56 -o "interpolation_b.msh"
+TPMeSh -x 0 0 0 0.4 0 0 0.4 0.2 -o "interpolation_c.msh"
 ```
 
 ![alt text](assets/interpolation.png)
