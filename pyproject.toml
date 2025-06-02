@@ -28,7 +28,8 @@ dependencies = [
     "libigl",
     "meshio",
     "numpy",
-    # "git+https://github.com/zfergus/pygalmesh.git",
+    "polyscope",
+    "pygalmesh @ git+https://github.com/zfergus/pygalmesh.git@main",
     "PyMCubes",
 ]
 keywords = ["mathematics", "engineering", "mesh", "mesh generation"]
