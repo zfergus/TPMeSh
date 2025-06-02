@@ -38,7 +38,7 @@ This uses `nanobind` to create a `_tpms` module that provides the C++ functional
 ## Usage
 
 ```
-$ python TPMeSh/mesh_tpms.py -h
+$ python -m TPMeSh.mesh_tpms -h
 usage: mesh_tpms.py [-h] [-x X X X X X X X X] [-i I] [-s] [-p] [-o OUTPUT] [-t THICKNESS]
                     [-n ELEMENTS_IN_THICKNESS] [-r REPEATS REPEATS REPEATS] [-v]
 
