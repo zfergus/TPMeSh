@@ -106,7 +106,7 @@ TPMeSh -i 2 -r 1 1 1 -p -o "2p.msh"
 
 ### Interpolation
 
-To interpolate a TPMS surface mesh, you can use the `-x` option with the design parameters. For example:
+To interpolate TPMS shapes, you can use the `-x` option with the design parameters. For example:
 
 ```bash
 TPMeSh -x 0.4 0 0.6 0 0 0 0 0 -o "interpolation_a.msh"
