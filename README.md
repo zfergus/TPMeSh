@@ -74,10 +74,10 @@ TPMeSh -i <primitive_index>
 where `<primitive_index>` is an integer from 0 to 7, corresponding to the following TPMS primitives:
 
 <!-- 4x2 Tables of Images for TPMS primitives -->
-| (1) Schoen Gyroid | (2) Schwarz Diamond | (3) Schwarz Primitive | (4) Schoen IWP |
+| (0) Schoen Gyroid | (1) Schwarz Diamond | (2) Schwarz Primitive | (3) Schoen IWP |
 | :---: | :---: | :---: | :---: |
 | ![Primitive 0](assets/primitives/0.png) | ![Primitive 1](assets/primitives/1.png) | ![Primitive 2](assets/primitives/2.png) | ![Primitive 3](assets/primitives/3.png) |
-| **(5) Neovius** | **(6) Fischer Koch S** | **(7) Schoen FRD** | **(8) PMY** |
+| **(4) Neovius** | **(5) Fischer Koch S** | **(6) Schoen FRD** | **(7) PMY** |
 | ![Primitive 4](assets/primitives/4.png) | ![Primitive 5](assets/primitives/5.png) | ![Primitive 6](assets/primitives/6.png) | ![Primitive 7](assets/primitives/7.png) |
 
 ### Volumetric Meshing
