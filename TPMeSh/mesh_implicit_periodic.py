@@ -2,6 +2,8 @@ import numpy as np
 import igl  # type: ignore
 import pygalmesh  # type: ignore
 
+from .utils import vertex_components_from_adjacency_matrix
+
 
 class PyGalImplicit(pygalmesh.DomainBase):
     def __init__(self, f):
@@ -123,4 +125,4 @@ def periodic_components(V, F, bounds=None):
             if np.linalg.norm(V[vj] - periodic_copy) < 1e-10:
                 A[vi, vj] = A[vj, vi] = 1
 
-    return igl.vertex_components_from_adjacency_matrix(A.tocsc())[0]
+    return vertex_components_from_adjacency_matrix(A.tocsc())[0]

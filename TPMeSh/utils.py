@@ -1,9 +1,41 @@
+from collections import deque
 import numpy as np
 import igl
 
 
+def vertex_components_from_adjacency_matrix(A):
+    assert A.shape[0] == A.shape[1], "A should be square."
+    n = A.shape[0]
+    seen = np.zeros(n, dtype=bool)
+    C = np.zeros(n, dtype=int)
+    vcounts = []
+    id = 0
+    for k in range(n):
+        if seen[k]:
+            continue
+        Q = deque()
+        Q.append(k)
+        vcounts.append(0)
+        while Q:
+            f = Q.popleft()
+            if seen[f]:
+                continue
+            seen[f] = True
+            C[f] = id
+            vcounts[id] += 1
+            row_start = A.indptr[f]
+            row_end = A.indptr[f+1]
+            neighbors = A.indices[row_start:row_end]
+            for g in neighbors:
+                if not seen[g] and A[f, g]:
+                    Q.append(g)
+        id += 1
+    counts = np.array(vcounts, dtype=int)
+    return C, counts
+
+
 def components(V: np.ndarray, F: np.ndarray):
-    return igl.vertex_components_from_adjacency_matrix(igl.adjacency_matrix(F))[0]
+    return vertex_components_from_adjacency_matrix(igl.adjacency_matrix(F))[0]
 
 
 def remove_small_components(V, F):

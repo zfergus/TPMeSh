@@ -8,10 +8,10 @@ version = "0.0.1"
 authors = [{ name = "Zachary Ferguson", email = "zy.fergus@gmail.com" }]
 description = "Triply periodic meshing for triply periodic minimal surfaces"
 readme = "README.md"
-license = { file = "LICENSE" }
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
 classifiers = [
     "Development Status :: 4 - Beta",
-    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.9",
